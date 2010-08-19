@@ -16,7 +16,7 @@ class ApplicationController < ActionController::Base
 
   before_filter :get_word
   def get_word
-    @word = Wordnik::Word.find(params[:wordstring]) if params[:wordstring]
+    @word = Wordnik::Word.find(params[:wordstring]) if (params[:wordstring] && !params[:wordstring].blank?)
   end
 
 end

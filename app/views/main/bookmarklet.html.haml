@@ -1,0 +1,14 @@
+%html
+  %head
+  %body
+    .container
+      %h1 Wordnik Contextual Lookup Widget
+      %h3 Installation Instructions:
+      %ol
+        %li 
+          Drag this link to your bookmarks bar:
+          = link_to("Wordnik Lookup", "javascript:(function(){var t=((new Date)*1);var s=document.createElement('script');s.type='text/javascript';s.src='http://localhost:3020/javascripts/wordnik_context.js?'+t;document.getElementsByTagName('head')[0].appendChild(s);})()")
+        %li
+          Click that bookmark on any web page to enable the Wordnik Lookup widget. 
+        %li
+          After you've enabled the widget, double-click on a word to look it up.

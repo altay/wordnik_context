@@ -1,5 +1,8 @@
-%h2= @word.wordstring
-%ul#examples
-  - @definitions.each do |d|
-    - unless d.text.nil?
-      %li= d.text
+- if @word.nil? || @definitions.empty?
+  %em Sorry, we couldn't find any results for "#{params[:wordstring]}"
+- else
+  %h2= @word.wordstring
+  %ul#examples
+    - @definitions.each do |d|
+      - unless d.text.nil?
+        %li= d.text
