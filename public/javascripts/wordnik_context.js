@@ -35,7 +35,7 @@ var WORDNIK = new function() {
     var overlay;
     this.init = function() {
       if (wjq('#wordnik_overlay').length==0) {
-        wjq('body').append("<div id='wordnik_overlay'></div><iframe src='http://localhost:3020/main' id='wordnik_pop_frame' frameborder=0></iframe>");
+        wjq('body').append("<div id='wordnik_overlay'></div><iframe src='http://wordnik-context.heroku.com/main' id='wordnik_pop_frame' frameborder=0></iframe>");
         frame = wjq('#wordnik_pop_frame');
         overlay = wjq('#wordnik_overlay');
         WORDNIK.Popup.set_position();
@@ -76,14 +76,14 @@ var WORDNIK = new function() {
     wjq = jQuery.noConflict(); 
     wjq(document).ready(function() {
       alert('ready! double-click on a word.');
-      WORDNIK.dynacss('http://localhost:3020/stylesheets/wordnik_context.css');
+      WORDNIK.dynacss('http://wordnik-context.heroku.com/stylesheets/wordnik_context.css');
       WORDNIK.Popup.init();
       wjq(window).resize(WORDNIK.Popup.set_position);
       wjq(window).scroll(WORDNIK.Popup.set_position);
       wjq(window).dblclick(function(e) {
         var select_obj = get_selection();
         //var surrounding_text = get_surroundings(select_obj);
-        WORDNIK.Popup.set_frame_src('http://localhost:3020/main/stub/'+encodeURIComponent(select_obj.toString()));
+        WORDNIK.Popup.set_frame_src('http://wordnik-context.heroku.com/main/stub/'+encodeURIComponent(select_obj.toString()));
         WORDNIK.Popup.show();
       });
       // close the pop-up onclick
