@@ -1,0 +1,6 @@
+%h2= @wordstring
+%ul#examples
+  - @examples.each do |e|
+    %li
+      = e['exampleString']
+      %em -#{link_to(e['sourceName'], e['url'], :target=>'_blank')}

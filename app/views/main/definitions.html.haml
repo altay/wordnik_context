@@ -1,0 +1,5 @@
+%h2= @word.wordstring
+%ul#examples
+  - @definitions.each do |d|
+    - unless d.text.nil?
+      %li= d.text

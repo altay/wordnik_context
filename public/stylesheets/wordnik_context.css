@@ -1,0 +1,19 @@
+#wordnik_overlay {
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  z-index: 9997;
+}
+#wordnik_pop_frame {
+  /*background: rgba(255,255,255,.6);*/
+  /*background: #fff;*/
+  display: none;
+  height: 430px;
+  margin: 0 auto;
+  padding: 2px;
+  position: absolute;
+  width: 480px;
+  z-index: 9998;
+}

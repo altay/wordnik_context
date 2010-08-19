@@ -1,0 +1,23 @@
+%html
+  %head
+    = stylesheet_link_tag('wordnik_frame')
+  %body
+    #wordnik_container
+      #inner
+        #p_top
+          #logo
+          #fullscreen.alpha-80
+          %span#page_name.select_page_closed Overview
+          %ul#select_page.hidden
+            %li{:class=>"page_option active"} Overview
+            %li{:class=>"page_option"} Lyrics
+            %li{:class=>"page_option"} Media
+            %li{:class=>"page_option"} Favorites
+            %li{:class=>"page_option"} Stats
+        #p_mid
+          - if @word
+            #linknav #{link_to('stub', '/main/stub/'+URI.encode(@word.wordstring))} &bull; #{link_to('definitions', '/main/definitions/'+URI.encode(@word.wordstring))}
+          = yield
+        #p_bottom
+          #bookmark{:class=>"alpha-80 bookmark_inactive"} Bookmark
+          #share{:class=>"alpha-80 share_inactive"} Share
