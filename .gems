@@ -1,0 +1,3 @@
+haml --version '>= 2.2.20'
+httparty --version '>=0.5.2'
+wordnik-ruby --version '>=0.3.2'
