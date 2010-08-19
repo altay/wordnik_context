@@ -83,7 +83,7 @@ var WORDNIK = new function() {
       wjq(window).dblclick(function(e) {
         var select_obj = get_selection();
         //var surrounding_text = get_surroundings(select_obj);
-        WORDNIK.Popup.set_frame_src('http://wordnik-context.heroku.com/main/stub/'+encodeURIComponent(select_obj.toString()));
+        WORDNIK.Popup.set_frame_src('http://wordnik-context.heroku.com/main/definitions/'+encodeURIComponent(select_obj.toString()));
         WORDNIK.Popup.show();
       });
       // close the pop-up onclick
